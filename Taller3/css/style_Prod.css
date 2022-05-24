@@ -1,0 +1,21 @@
+
+fieldset{
+  background-color: #E9EBF7;
+  color: #000;
+  border-color: darkgoldenrod;
+  border: 8px groove (internal value);
+  border-radius: 7px;
+  width: 600px;
+}
+
+legend{
+  color: darkblue;
+  font-weight: bold;
+}
+
+#btnGuardar, #btnReset, #Basico3, #submit{
+  background-color: #D4D1FD;
+  color: darkblue;
+  border: 1px groove;
+  border-radius: 6px;
+}
