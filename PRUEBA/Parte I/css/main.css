@@ -1,0 +1,23 @@
+/* ==========================================================================
+   Author's: Paola Farinango
+   ========================================================================== */
+
+
+:root{
+	--primary: #CDF0D7;
+	--ligth: #CDF0D7;
+	--grey: #32575c;
+}
+.bg-primary{ background-color: var(--primary); }
+.bg-ligth { background-color: var(--ligth); }
+
+#footer{
+	padding: 3%;
+}
+
+/* RESPONSIVE */
+@media(max-width:780px){
+  form{
+    width: 95%;
+  }
+}

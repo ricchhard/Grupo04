@@ -1,0 +1,130 @@
+﻿ <!--hacer responisve para  sm md lg
+colocar un menu var inverso links: agrupados 
+docente Comandante Grupos (grupo1, grupo2, grupo3, ..., grupo8)
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>EXAMEN</title>
+   
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/iconbar.css">
+        <link rel="stylesheet" href="estilos.css" type="text/css"/>
+  
+  </head>
+  
+  <body>
+
+           
+    <div class="container" style="margin-top: 4%;">
+    
+      <!-- header (Rectangle) -->
+        <div id="header" class="col-xs-4 col-md-8 col-lg-12">
+            <img src="img/logo_ESPE.png" alt="" class="img-fluid" id="Espe_img" style="top: 20;left:350px;width:400px;height:89px;">
+            
+        </div>
+  </div>
+
+        <nav class="navbar navbar-inverse navbar-fixed-top" style="top:170px; width: 84%; left: 50px;">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button class="navbar-toggle" data-toggle="collapse" data-target="#ejemplo-5">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="#" class="navbar-brand">DevAsk</a>
+                </div>
+                <div class="collapse navbar-collapse" id="ejemplo-5">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#">Docente</a></li>
+                        <li><a href="comandante.html" target="new" >Comandante</a></li>
+
+                        <li><a href="#" class="dropdown-toggle" data-toggle="dropdown">Grupos<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="tablas.html">Grupo 1</a></li>
+                                <li><a href="tablas.html">Grupo 2</a></li>
+                                <li><a href="tablas.html">Grupo 3</a></li>
+                                <li><a href="tablas.html">Grupo 4</a></li>
+                                <li><a href="tablas.html">Grupo 5</a></li>
+                                <li><a href="tablas.html">Grupo 6</a></li>
+                                <li><a href="tablas.html">Grupo 7</a></li>
+                                <li><a href="tablas.html">Grupo 8</a></li>
+
+                            </ul>
+                        </li>
+                    </ul>
+                    <form class="navbar-form navbar-left">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="buscar">
+                        </div>
+                        <boton class="btn btn-primary">Buscar</boton>
+                    </form>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#">Inicio</a></li>
+                        <li><a href="#">Preguntas</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+      
+
+
+  <!-- leftMenu (Rectangle) -->
+      <div class="container">
+         <div id="leftMenu" class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+		    <a href="" class="btn btn-info"><span class="glyphicon glyphicon-user"></span> LOGIN</a><br>
+            <br><a href="" class="btn btn-info"><span class="glyphicon glyphicon-book"></span> REGISTRO</a><br>
+            <br><a href="" class="btn btn-info"><span class="glyphicon glyphicon-fire"></span> PRODUCTO </a><br> 
+            <br><a href="formulario.html" class="btn btn-danger"><span class="glyphicon glyphicon-fire"></span> FORMULARIO </a>
+          </div>    
+
+         <div id="content" class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+              <h2>Desarrollo de aplicaciones WEB</h2>
+              
+              <p>Estudiante: Richard Caraguay, Paola Farinango</p>
+              <p>NRC: 8496</p>
+              <p>Fecha: 17/05/2022</p>
+             
+         </div>
+
+        <!-- rightMenu (Rectangle) -->
+        
+         <div id="rightMenu" class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+           <iframe height="290" width="390" src="https://www.youtube.com/embed/7Gi4NRPV_fg?ecver=2" frameborder="1" allowfullscreen></iframe> 
+         </div>
+    </div>
+     
+
+ 
+
+
+      <!-- footer (Rectangle) -->
+      <div class="container">
+          <div class="row">
+            <div id="footer" class="col-md-5 col-lg-4 ml-lg-0 text-center text-md-end">
+
+            <button class="btn btn-info">
+                <span class="icon icon-facebook app2"> Facebook</span>
+            </button>
+            <button class="btn btn-info">
+                <span class="icon-twitter app2"> Twitter</span>
+            </button>
+            <button class="btn btn-info">
+                <span class="icon-google app2"> Google</span>
+            </button>
+
+         </div>
+          </div>
+
+      </div>
+  
+        <script type="text/javascript" src="js/vendor/jquery-1.11.0.min.js"></script>
+        <script type="text/javascript" src="js/vendor/bootstrap.min.js"></script>
+ 
+</body>
+</html>
