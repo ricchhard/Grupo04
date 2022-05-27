@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>Capítulo 2- Listas</title>
+		
+		<meta name="description" content="">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	    <link rel="stylesheet" href="css/bootstrap.min.css">
+	    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+	    <link rel="stylesheet" href="css/main.css">
+	</head>
+	<body>
+
+
+		<div class="container">
+			<h1 style=text-align:center>Capítulo 2 - Listas</h1>
+			<h4>Integrantes: Caraguay y Farinango</h4><br>
+
+
+			<!--EJEMPLO 1-->
+			<h4>Listas</h4>
+			<div class="container">
+				<ul>
+					<li>Inicio</li>
+					<li>Noticia</li>
+					<li>Articulos</li>
+					<li>Contactos</li>
+				</ul>
+			</div>
+			<br>
+
+
+			<!--EJEMPLO 2-->
+			<h4>Listas</h4>
+			<!--Se le agrega la clase list-unstyled en <ul>-->
+			<div class="container">
+				<ul class="list-unstyled">
+					<li>Inicio</li>
+					<li>Noticia</li>
+					<li>Articulos</li>
+					<li>Contactos</li>
+				</ul>
+			</div>
+			<br>
+			
+			<!--EJEMPLO 3-->
+			<!--Los elementos mostrados siguen un orden se enumeran de forma consecutivas -->
+			<div class="container">
+			<h4>Listas Ordenadas</h4>
+			<ol>
+				<li>Requerimientos</li>
+				<li>Diseño</li>
+				<li>Implementación</li>
+				<li>Verificación</li>
+				<li>Mantenimiento</li>
+			</ol>
+			</div>
+			<br>
+
+
+			<!--EJEMPLO 4-->
+			<!--Agregamos la clase list-inline en la etiqueta <ol> para ordedarlos de manera lineal Nota tambien funciona si usamos la etiqueta <ul> en vez de <ol>-->
+			<div class="container">
+			<h4>Listas Ordenadas de Forma Lineal</h4>
+			<ol class="list-inline">
+				<li>Requerimientos</li>
+				<li>Diseño</li>
+				<li>Implementación</li>
+				<li>Verificación</li>
+				<li>Mantenimiento</li>
+			</ol>
+			</div>
+			<br>
+
+
+
+			<!--EJEMPLO 5-->
+			<!--listado de basicos personalizado por la clase list-group-->
+			<div class="container">
+			<h4>Listas con elementos complejos/listado basico</h4>
+			
+			<ul class="list-group">
+				<li class="list-group-item">Imagenes</li>
+				<li class="list-group-item">Archivos</li>
+				<li class="list-group-item">Audios</li>
+				<li class="list-group-item">Videos</li>
+				<li class="list-group-item">Mensajes</li>
+			</ul>
+			</div>
+			<br>
+
+
+
+			<!--EJEMPLO 6-->
+			<!--listado personalizado por la clase list-group agregando badge-->
+			<div class="container">
+			<h4>Listas de elementos con badges</h4>
+			<ul class="list-group">
+				<li class="list-group-item"><span class="badge">15</span>Imagenes</li>
+				<li class="list-group-item"><span class="badge">80</span>Archivos</li>
+				<li class="list-group-item"><span class="badge">10</span>Audios</li>
+				<li class="list-group-item"><span class="badge">8</span>Videos</li>
+				<li class="list-group-item"><span class="badge">23</span>Mensajes</li>
+			</ul>
+			</div>
+			<br>
+
+
+
+			<!--EJEMPLO 7-->
+			<!--Al seleccionar los elementos de la lista se observa que al pasar el cursor se visualiza un holder en cada elemento-->
+			<div class="container">
+			<h4>Listas de elementos con enlaces</h4>
+			
+			<div class="list-group">
+				<a href="#" class="list-group-item"><span class="badge">15</span>Imagenes</a>
+				<a href="#" class="list-group-item"><span class="badge">80</span>Archivos</a>
+				<a href="#" class="list-group-item"><span class="badge">10</span>Audios</a>
+				<a href="#" class="list-group-item"><span class="badge">17</span>Videos</a>
+				<a href="#" class="list-group-item"><span class="badge">23</span>Mensajes</a>
+			</div>
+
+			</div>
+			<br>
+
+
+			<!--EJEMPLO 8-->
+			<!--mejor diseño personalizado al anterior-->
+			<div class="container">
+			<h4>Listas de elementos con enlaces</h4>
+			
+			<div class="list-group">
+				<a href="#" class="list-group-item active"><span class="glyphicon glyphicon-picture"></span><span class="badge">15</span> Imagenes</a>
+				<a href="#" class="list-group-item"><span class="glyphicon glyphicon-folder-open"></span><span class="badge">80</span> Archivos</a>
+				<a href="#" class="list-group-item"><span class="glyphicon glyphicon-music"></span><span class="badge">10</span> Audios</a>
+				<a href="#" class="list-group-item"><span class="glyphicon glyphicon-film"></span><span class="badge">17</span> Videos</a>
+				<a href="#" class="list-group-item"><span class="glyphicon glyphicon-comment"></span><span class="badge">23</span> Mensajes</a>
+			</div>
+			</div>
+			<br>
+
+
+
+			<!--EJEMPLO 9-->
+			<!--mejor diseño personalizado al anterior-->
+			<div class="container">
+			<h4>Clases contextuales</h4>
+			
+			<ul class="list-group">
+				<li class="list-group-item list-group-item-success">Éxito</li>
+				<li class="list-group-item list-group-item-info">Información</li>
+				<li class="list-group-item list-group-item-warning">Advertencia</li>
+				<li class="list-group-item list-group-item-danger">Peligro</li>
+			</ul>
+			<br>
+
+			<div class="list-group">
+				<a href="#" class="list-group-item list-group-item-success">Éxito</a>
+				<a href="#" class="list-group-item list-group-item-info">Información</a>
+				<a href="#" class="list-group-item list-group-item-warning">Advertencia</a>
+				<a href="#" class="list-group-item list-group-item-danger">Peligro</a>
+			</div>	
+
+			</div>
+			<br>
+
+
+
+
+			<!--EJEMPLO 10-->
+			<!--mejor diseño personalizado al anterior-->
+			<div class="container">
+			<h4>Lista de Elementos complejos</h4>
+			<div class="list-group">
+				<a href="#" class="list-group-item active"><h4 class="list-group-item-heading">Titulo del elemento de la  lista</h4><p class="list-group-item-text">"No hay nadie que ame el dolor mismo, que lo busque, lo encuentre y lo quiera, simplemente porque es el dolor."</p></a>
+				<a href="#" class="list-group-item"><h4 class="list-group-item-heading">Titulo del elemento de la  lista</h4><p class="list-group-item-text">"No hay nadie que ame el dolor mismo, que lo busque, lo encuentre y lo quiera, simplemente porque es el dolor."</p></a>
+				<a href="#" class="list-group-item"><h4 class="list-group-item-heading">Titulo del elemento de la  lista</h4><p class="list-group-item-text">"No hay nadie que ame el dolor mismo, que lo busque, lo encuentre y lo quiera, simplemente porque es el dolor."</p></a>
+			</div>
+			</div>
+
+		<br>
+	</div>
+
+
+		<script type="text/javascript" src="js/vendor/jquery-1.11.0.min.js"></script>
+	    <script type="text/javascript" src="js/vendor/bootstrap.min.js"></script>
+	</body>
+</html>
