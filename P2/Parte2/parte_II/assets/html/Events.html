@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Events Grupo 4</title>
+    <!-- BOOTSTRAP CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="../css/prism.css" rel="stylesheet" />
+    <script src="../js/prism.js"></script>
+  </head>
+  <body>
+    <!-- NAVIGATION -->
+    
+        <header id="header" class="d-flex align-items-center">
+      <div class="container d-flex align-items-center justify-content-between">
+  
+        <a href="../../index.html" class="logo mr-auto"><img src="../img/logo.png" alt=""></a>
+        <!-- Uncomment below if you prefer to use a text logo -->
+        <!--<h2 class="logo mr-auto"><a href="index.html">Imperial</a></h2> -->
+  
+      </div>
+    </header>
+    <!-- HEADER -->
+    <header class="main-header1">
+      <div class="background-overlay text-white py-5">
+        <div class="container">
+          <div class="row d-flex h-100">
+            <div class="col-sm-12 text-center justify-content-center align-self-center">
+              <h1>
+                JavaScript HTML DOM Events
+              </h1>
+              <p>HTML DOM permite que JavaScript reaccione a eventos HTML</p>  
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ABOUT -->
+    <section class="m5 bg-light">
+      <div class="container">
+        <div class="row">
+          <div class="m-5">
+            <h3 class="text-center">Reacting to Events</h3>
+            <p>
+              Un JavaScript se puede ejecutar cuando ocurre un evento, como cuando un usuario hace clic en un elemento HTML.
+              Para ejecutar código cuando un usuario hace clic en un elemento, agregue código JavaScript a un atributo de evento HTML: onclick=JavaScript <br><br>
+              Examples of HTML events:<br>
+
+            <li>Cuando un usuario hace clic con el mouse</li>
+            <li>Cuando se ha cargado una página web</li>
+            <li>Cuando se ha cargado una imagen</li>
+            <li>Cuando el mouse se mueve sobre un elemento</li>
+            <li>Cuando se cambia un campo de entrada</li>
+            <li>Cuando se envía un formulario HTML</li>
+            <li>Cuando un usuario pulsa una tecla</li>
+            En este ejemplo, el contenido del elemento cambia cuando un usuario hace clic en él:
+
+            <br><br>
+          </p>
+          <pre style="width: 240px; height: 160px"><code class="language-js" >
+            <div class="card-body">
+              &lt;!DOCTYPE html>
+                &lt;html><br>
+                  &lt;body><br>
+                    &lt;h1 onclick="this.innerHTML = 'Ooops!'">
+                      Haz clic en este texto
+                    &lt;/h1>        
+                  &lt;/body>
+                &lt;/html><br>
+          </code></pre>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ACCORDION -->
+    <section class="container text-center p-5">
+      <div class="row">
+        <div class="accordion" id="accordionExample">
+          <div class="card">
+            <div class="card-header" id="headingOne">
+              <h5 class="mb-0">
+                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  ATRIBUTOS DE EVENTOS HTML
+                </button>
+              </h5>
+            </div>
+
+            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+              <div class="card-body">
+                <p>
+                  Para asignar eventos a elementos HTML, puede utilizar atributos de evento.
+                  En el siguiente ejemplo, displayDatese ejecutará una función nombrada cuando se haga clic en el botón.
+                </p>
+              </div>
+
+                        <pre style="width: 600px;"><code class="language-js" >
+                          &lt;!DOCTYPE html>
+                          &lt;html>       
+                          &lt;body>
+                          &lt;h1>Eventos HTML de JavaScript&lt;/h1>
+                          &lt;h2 onclick="changeText(this)">Haz clic en este texto&lt;/h2>
+                          &lt;script>
+                          function changeText(id) {
+                            id.innerHTML = "Ooops!";
+                          }
+                          &lt;/script>
+                          &lt;/body>
+                          &lt;/html> 
+                        </code></pre>
+
+
+            </div>
+          </div>
+          <div class="card text-center">
+            <div class="card-header" id="headingTwo">
+              <h5 class="mb-0">
+                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  LOS EVENTOS ONLOAD Y ONUNLOAD
+                </button>
+              </h5>
+            </div>
+            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+              <div class="card-body">
+              <p>
+              <li>Los eventos onload y onunload se activan cuando el usuario entra o sale de la página.</li>
+              <li>El onload evento se puede utilizar para verificar el tipo de navegador del visitante y la versión del navegador, y cargar la versión adecuada de la página web según la información.</li>
+              <li>Los eventos onload y onunload se pueden utilizar para tratar las cookies.</li>
+              <br>
+              </p>
+              <section class="py-5">
+                <div class="container">
+                  <h2>EJEMPLO</h2>
+                  <div class="row">
+                  <div class="col-md-6">
+                      <pre style="width: 600px;"><code class="language-js" >
+                        &lt;!DOCTYPE html>
+                          &lt;html>
+                          &lt;body onload="checkCookies()">
+                          &lt;h1>Eventos HTML de JavaScript&lt;/h1>
+                          &lt;p id="demo">&lt;/p>
+                          &lt;script>
+                            function checkCookies() {
+                            var text = "";
+                              if (navigator.cookieEnabled == true) {
+                                text = "Las cookies están habilitadas";} 
+                                else {
+                                text = "Las cookies no están habilitadas";}
+                                document.getElementById("demo").innerHTML = text;
+                            }
+                              &lt;/script>
+                              &lt;/body>
+                            &lt;/html>  
+                      </code></pre>
+                    
+                  </div>
+                    <div class="col-md-5" style="margin-left: 60px;" >
+                      <h1>Eventos HTML de JavaScript</h1>
+                      <body onload="checkCookies()">
+                      <p id="demo"></p>
+                      <script>
+                        function checkCookies() {
+                          var text = "";
+                            if (navigator.cookieEnabled == true) {
+                              text = "Las cookies están habilitadas";
+                            } else {
+                              text = "Las cookies no están habilitadas";
+                            } 
+                            document.getElementById("demo").innerHTML = text;
+                          }
+                      </script>
+                      </body>
+                  </div>
+                </div>
+              </section>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingThree">
+              <h5 class="mb-0">
+                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  EL EVENTO ONCHANGE
+                </button>
+              </h5>
+            </div>
+            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+              <div class="card-body">
+                <p>
+                  El onchange evento se usa a menudo en combinación con la validación de los campos de entrada
+                  A continuación se muestra un ejemplo de cómo utilizar onchange. La upperCase() función se llamará cuando un usuario cambie el contenido de un campo de entrada.
+                  <br>
+                </p>
+                <pre style="width: 900px; height: 170px"><code class="language-js" >
+                  <div class="card-body">
+                    &lt;!DOCTYPE html><br>
+                    &lt;html>
+                    &lt;body onload="checkCookies()">
+                    &lt;h1>Eventos HTML de JavaScript&lt;/h1>
+                    &lt;p id="demo"></p>
+                      &lt;Enter your name: &lt;input type="text" id="fname" onchange="upperCase()"> 
+                      &lt;p>Cuando abandona el campo de entrada, se activa una función que transforma el texto de entrada a mayúsculas.&lt;/p>
+                          &lt;script>
+                              function upperCase() {
+                                const x = document.getElementById("fname");
+                                x.value = x.value.toUpperCase();
+                              }
+                            &lt;/script>
+                        &lt;/body>
+                      &lt;/html>  
+                </code></pre>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- EJEMPLOS-->
+
+    <section class="py-5">
+      <h1>MAS EJEMPLOS</h1>
+        <div class="container sm-col-6">
+          <div class="row">
+            <div class="col-sm-6 text-center justify-content-center align-self-center">
+              <pre style="width: 550px;"><code class="language-html" >
+                &lt;div onmouseover="mOver(this)" onmouseout="mOut(this)"style="background-color:#D94A38;width:120px;height:20px;padding:40px;">Mouse Over Me&lt;/div>           
+                &lt;script>
+                    function mOver(obj) {
+                      obj.innerHTML = "Thank You"
+                    }         
+                    function mOut(obj) {
+                      obj.innerHTML = "Mouse Over Me"
+                    }
+                  &lt;/script>
+                </code></pre>
+            </div>
+
+            <div class="col-sm-6 text-center justify-content-center align-self-center">
+            <h1>
+              LOS EVENTOS ONMOUSEOVER Y ONMOUSEOUT
+            </h1>
+            <p>Los eventos onmouseover y onmouseout se pueden usar para activar una función cuando el usuario pasa el mouse sobre o fuera de un
+                elemento HTML:</p>
+            <div class="btn btn-lg" onmouseover="mOver(this)" onmouseout="mOut(this)" style="background-color:#D94A38;width:210px;height:20px;padding:40px;">Mouse Over Me</div>
+            </div> 
+
+            <div class="col-sm-6 text-center justify-content-center align-self-center">
+              <pre style="width: 550px;"><code class="language-html" >
+                  &lt;body>
+                  &lt;h2>JavaScript HTML Events&lt;/h2>
+                    Enter your name: &lt;input type="text" id="fname" onchange="upperCase()">
+                  &lt;p>When you leave the input field, a function is triggered which transforms the input text to upper case.&lt;/p>
+                  &lt;script>
+                  function upperCase() {
+                    const x = document.getElementById("fname");
+                    x.value = x.value.toUpperCase();
+                  }
+                  &lt;/script>
+                  &lt;/body>
+            </code></pre>
+            </div>
+
+            <div class="col-sm-6 text-center justify-content-center align-self-center">
+              <h1>EL EVENTO ONCHANGE</h1>
+              <p>El evento onchange se usa a menudo en combinación con la validación de campos de entrada.
+            
+                A continuación se muestra un ejemplo de cómo utilizar onchange. 
+                Se llamará a la función upperCase() cuando un usuario cambie el 
+                contenido de un campo de entrada.</p>
+                Enter your name: <input type="text" id="fname" onchange="upperCase()">
+                <p>Cuando abandona el campo de entrada, se activa una función que transforma el texto de entrada en mayúsculas.</p>
+              <script>
+                  function mOver(obj) {
+                    obj.innerHTML = "Thank You"
+                  }
+    
+                  function mOut(obj) {
+                    obj.innerHTML = "Mouse Over Me"
+                  }
+                  function upperCase() {
+                    const x = document.getElementById("fname");
+                    x.value = x.value.toUpperCase();
+                  }
+                </script>
+            </div>  
+          </div>
+        </div>  
+    </section>
+
+    <footer>
+      <div class="container p-3">
+        <div class="row text-center text-white">
+          <div class="col ml-auto">
+            <p>Copyright: Richard Carguay y Paola Farinango &copy; 2018</p>
+          </div>
+        </div>
+      </div>       
+    </footer>
+
+    <!-- BOOTSTRAP SCRIPTS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+  </body>
+</html>

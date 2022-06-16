@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Animation Grupo4</title>
+    <!-- BOOTSTRAP CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="../css/prism.css" rel="stylesheet" />
+<script src="../js/prism.js"></script>
+  </head>
+  <body>
+    <header id="header" class="d-flex align-items-center">
+      <div class="container d-flex align-items-center justify-content-between">
+  
+        <a href="../../index.html" class="logo mr-auto"><img src="../img/logo.png" alt=""></a>
+        <!-- Uncomment below if you prefer to use a text logo -->
+        <!--<h2 class="logo mr-auto"><a href="index.html">Imperial</a></h2> -->
+  
+      </div>
+    </header><!-- End Header -->
+    <!-- HEADER -->
+    <header class="main-header">
+      <div class="background-overlay text-white py-5">
+        <div class="row d-flex h-100">
+          <div class="col-sm-6 text-center justify-content-center align-self-center">
+            <br><br>
+            <h1>
+              Aprenda a crear animaciones HTML usando JavaScript.
+            </h1>
+          </div>
+        </div>
+      </div>
+    </header>
+
+
+    <!-- ABOUT -->
+    <section class="m6 bg-light">
+      <div class="container">
+        <div class="row">
+          <div class="m-5">
+            <h3>JavaScript HTML DOM Animation</h3>
+            <p>
+              To demonstrate how to create HTML animations with JavaScript, we will use a simple web page:
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ACCORDION -->
+
+    <section class="container text-center p-5">
+      <div class="row">
+        <div class="accordion" id="accordionExample">
+          <div class="card">
+            <div class="card-header" id="headingOne">
+              <h5 class="mb-0">
+                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="width:100%;">
+                  CREAR UN CONTENEDOR DE ANIMACION
+                </button>
+              </h5>
+            </div>
+
+            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample" >
+              <br>
+              <p>Todas las animaciones deben ser relativas a un elemento contenedor.</p>
+              <pre style="width: 700px; height: 150px"><code class="language-js" >
+              <div class="card-body">
+                &lt;div id ="container">
+                  &lt;div id ="animate">
+                        My animation will go here
+                  &lt;/div>
+                &lt;/div>
+              </div>
+            </code></pre>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingTwo">
+              <h5 class="mb-0">
+                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  ESTILO DE LOS ELEMENTOS
+                </button>
+              </h5>
+            </div>
+            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+              <br>
+              <li>El elemento contenedor debe crearse con style = " position: relative ".</li>
+              <li>El elemento de animación debe crearse con style = " position: absolute ".</li>
+              <pre style="width: 800px; height: 300px"><code class="language-js" ></code>
+                <div class="card-body">
+                  &lt;html>
+                  #container {
+                    width: 400px;
+                    height: 400px;
+                    position: relative;
+                    background: yellow;
+                  }
+                  #animate {
+                    width: 50px;
+                    height: 50px;
+                    position: absolute;
+                    background-color: red;
+                  }
+              </code></pre>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingThree">
+              <h3 class="mb-0"><button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  CODIGO DE ANIMACION
+                </button></h3>
+            </div>
+            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+              <br>
+              <li>Las animaciones de JavaScript se realizan programando cambios graduales en el estilo de un elemento.</li>
+              <li>Los cambios son llamados por un temporizador. Cuando el intervalo del temporizador es pequeño, la animación parece continua.</li>
+              <p>código básico es:</p>
+              <pre style="width: 800px; height: 300px"><code class="language-js" >
+                <div class="card-body">
+                JavaScript animations are done by programming gradual changes in an element's style.
+                The changes are called by a timer. When the timer interval is small, 
+                the animation looks continuous.
+                The basic code is:<br>
+                id = setInterval(frame, 5);<br>
+                function frame() {<br>
+                  if (/* test for finished */) {<br>
+                    clearInterval(id);<br>
+                  } else {<br>
+                    /* code to change the element style */ }
+                }
+              </div>
+            </code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+        <!-- Ejemplo 1 -->
+
+        <section class="py-5">
+          <div class="container">
+            <h2>EJEMPLO #1</h2>
+            <h3>Crea la animación completa usando JavaScript</h3>
+            <div class="row">
+            <div class="col-md-6">
+                <pre style="width: 600px;"><code class="language-js" >
+                  &lt;html>
+                  #container {
+                    width: 400px;
+                    height: 400px;
+                    position: relative;
+                    background: yellow;
+                  }
+                  #animate {
+                    width: 50px;
+                    height: 50px;
+                    position: absolute;
+                    background-color: red;
+                  }
+                  &lt;body>
+                  &lt;p>&lt;button onclick="myMove()">Click Me&lt;/button>&lt;/p> 
+                  &lt;div id ="container">
+                    &lt;div id ="animate">&lt;/div>
+                  &lt;/div>
+                  &lt;script>
+                  function myMove() {
+                    let id = null;
+                    const elem = document.getElementById("animate");   
+                    let pos = 0;
+                    clearInterval(id);
+                    id = setInterval(frame, 5);
+                    function frame() {
+                      if (pos == 350) {
+                        clearInterval(id);
+                      } else {
+                        pos++; 
+                        elem.style.top = pos + "px"; 
+                        elem.style.left = pos + "px"; 
+                      }
+                    }
+                  }
+                  &lt;/script>
+                  &lt;/body>
+                  &lt;/html></code></pre>
+              
+            </div>
+              <div class="col-md-5" style="margin-left: 50px;" >
+                <p><button onclick="myMove()">Click Me</button></p> 
+    
+                <div id ="container" style="width: 400px;
+                height: 400px;
+                position: relative;
+                background: yellow;">
+                  <div id ="animate" style="width: 50px;
+                  height: 50px;
+                  position: absolute;
+                  background-color: red;"></div>
+                </div>
+              </div>
+              <script>
+                function myMove() {
+                  let id = null;
+                  const elem = document.getElementById("animate");   
+                  let pos = 0;
+                  clearInterval(id);
+                  id = setInterval(frame, 5);
+                  function frame() {
+                    if (pos == 350) {
+                      clearInterval(id);
+                    } else {
+                      pos++; 
+                      elem.style.top = pos + "px"; 
+                      elem.style.left = pos + "px"; 
+                    }
+                  }
+                }
+                </script>
+            </div>
+          </div>
+        </section>
+
+        <!--Ejemplo2-->
+
+        <section class="py-5">
+          <div class="container">
+            <h2>EJEMPLO #2</h2>
+            <h3>Crea la animación usando JavaScript TREN</h3>
+            <div class="row">
+            <div class="col-md-6">
+                <pre style="width: 600px;"><code class="language-js" >
+                  &lt;html>
+                  &lt;style>
+                  position: relative;
+                  cursor: pointer;
+                  &lt;/style>
+                  &lt;body>
+                  &lt;p>&lt;Haz click en el tren&lt;/p> 
+                  &lt;img id ="train" src="https://js.cx/clipart/train.gif">
+                  &lt;script>
+                  train.onclick = function() {
+                    let start = Date.now();
+                    let timer = setInterval(function() {
+                      let timePassed = Date.now() - start;
+                      train.style.left = timePassed / 5 + 'px';
+                      if (timePassed > 2000) 
+                  clearInterval(timer);
+                    }, 20);
+                  }
+                  &lt;/script>
+                  &lt;/body>
+                  &lt;/html></code></pre>
+              
+            </div>
+              <div class="col-md-5" style="margin-left: 50px;" >
+                <p>Haz click en el tren</p>
+
+                <img id="train" src="https://js.cx/clipart/train.gif">
+                <script>
+                  train.onclick = function() {
+                    let start = Date.now();
+                    let timer = setInterval(function() {
+                      let timePassed = Date.now() - start;
+                      train.style.left = timePassed / 5 + 'px';
+                      if (timePassed > 2000) clearInterval(timer);
+                    }, 20);
+                  }
+                </script>
+            </div>
+          </div>
+        </section>
+
+    <!--Footer-->
+    <footer>
+      <div class="container p-3">
+        <div class="row text-center text-white">
+          <div class="col ml-auto">
+            <p>Copyright &copy; 2018</p>
+          </div>
+        </div>
+      </div>       
+    </footer>
+
+    <!-- BOOTSTRAP SCRIPTS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+  </body>
+</html>

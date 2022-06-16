@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>NodeList Grupo 4</title>
+    <!-- BOOTSTRAP CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="../css/prism.css" rel="stylesheet" />
+    <script src="../js/prism.js"></script>
+  </head>
+  <body>
+    <!-- NAVIGATION -->
+    <header id="header" class="d-flex align-items-center">
+      <div class="container d-flex align-items-center justify-content-between">
+        <a href="../../index.html" class="logo mr-auto"><img src="../img/logo.png" alt=""></a>
+      </div>
+    </header>
+    <!-- HEADER -->
+    <header class="main-header6">
+      <div class="background-overlay text-white py-5">
+        <div class="container">
+          <div class="row d-flex h-100">
+            <div class="col-sm-12 text-center justify-content-center align-self-center">
+              <h1>
+                JavaScript HTML DOM Node Lists
+              </h1>
+              <p>The HTML DOM NodeList Object
+                A NodeList object is a list (collection) of nodes extracted from a document.
+                
+                A NodeList object is almost the same as an HTMLCollection object.
+                
+                Some (older) browsers return a NodeList object instead of an HTMLCollection for methods like getElementsByClassName().
+                
+                All browsers return a NodeList object for the property childNodes. 
+                
+                Most browsers return a NodeList object for the method querySelectorAll().
+                
+                The following code selects all &lt;p> nodes in a document:</p>
+              <a href="#" class="btn btn-outline-secondary btn-lg text-white">
+                Read More
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- FEATURES -->
+
+    <!-- ABOUT -->
+    <section class="m5 text-left bg-light">
+      <div class="container">
+        <div class="row">
+          <div class="m-5">
+            <h3>The Difference Between an HTMLCollection and a NodeList</h3>
+            <p>
+              Una lista de nodos y una colección de HTML son prácticamente lo mismo.<br>
+
+Ambos son colecciones tipo matriz (listas) de nodos (elementos) extraídos de un documento. Se puede acceder a los nodos por números de índice. El índice comienza en 0.
+
+Ambos tienen una propiedad de longitud que devuelve el número de elementos de la lista (colección).<br>
+Una HTMLCollection es una colección de elementos de documento.
+
+Una lista de nodos es una colección de nodos de documentos (nodos de elementos, nodos de atributos y nodos de texto).<br>
+
+Se puede acceder a los elementos de HTMLCollection por su nombre, identificación o número de índice.<br>
+
+Solo se puede acceder a los elementos de NodeList por su número de índice.<br>
+
+Una HTMLCollection es siempre una colección en vivo.<br>
+Ejemplo: si agrega un elemento &lt;li> a una lista en el DOM, la lista en HTMLCollection también cambiará.
+
+Una NodeList suele ser una colección estática. Ejemplo: si agrega un elemento &lt;li> a una lista en el DOM, la lista en NodeList no cambiará.<br>
+
+Los métodos getElementsByClassName() y getElementsByTagName() devuelven una HTMLCollection activa.
+El método querySelectorAll() devuelve una lista de nodos estática.
+
+La propiedad childNodes devuelve una NodeList activa.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ACCORDION -->
+    <section class="container text-center p-5">
+      <div class="row">
+        <div class="accordion" id="accordionExample">
+          <div class="card">
+            <div class="card-header" id="headingOne">
+              <h5 class="mb-0">
+                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  HTML DOM Node List Length
+                </button>
+              </h5>
+            </div>
+
+            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample" style="width: 100%;">
+              <div class="card-body">
+                <div class="row">
+                <div class="col-sm-3 text-center justify-content-center align-self-center">
+                  <pre style="width: 550px;"><code class="language-html" >
+&lt;h2>JavaScript HTML DOM&lt;/h2>
+&lt;p>Hello World!&lt;/p>
+&lt;p>Hello Norway!&lt;/p>
+&lt;p>Click the button to change the color of all p elements.&lt;/p>
+&lt;button onclick="myFunction()">Try it&lt;/button>
+&lt;script>
+function myFunction() {
+  const myNodelist = document.querySelectorAll("p");
+  for (let i = 0; i < myNodelist.length; i++) {
+    myNodelist[i].style.color = "red";
+  }
+}
+&lt;/script>
+                  </code></pre>
+
+                </div>
+                <div class="col-sm-3 text-center justify-content-rigth align-self-center" style="margin-left: 400px;">
+                  <h2>JavaScript HTML DOM</h2>
+                  <p>Hello World!</p>                  
+                  <p>Hello Norway!</p>                  
+                  <p>Click the button to change the color of all p elements.</p>                 
+                  <button onclick="myFunction()">Try it</button>                  
+                  <script>
+                  function myFunction() {
+                    const myNodelist = document.querySelectorAll("p");
+                    for (let i = 0; i < myNodelist.length; i++) {
+                      myNodelist[i].style.color = "red";
+                    }
+                  }
+                  </script>
+                </div>
+              </div>
+            </div>
+          </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingTwo">
+              <h5 class="mb-0">
+                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  QuerySelectorAll
+                </button>
+              </h5>
+            </div>
+            <div id="collapseTwo" class="collapse hide" aria-labelledby="headingOne" data-parent="#accordionExample" style="width: 100%;">
+              <div class="card-body">
+                <div class="row">
+                <div class="col-sm-3 text-center justify-content-center align-self-center">
+                  <pre style="width: 550px;"><code class="language-html" >
+&lt;body>
+  &lt;h2>JavaScript HTML DOM&lt;/h2> 
+  &lt;p>Hello World!&lt;/p> 
+  &lt;p>Hello Norway!&lt;/p> 
+  &lt;p id="demo">&lt;/p> 
+  &lt;script>
+  const myNodelist = document.querySelectorAll("p"); 
+  document.getElementById("demo").innerHTML = "The innerHTML of the second paragraph is: " + myNodelist[1].innerHTML; 
+  &lt;/script>
+&lt;/body>
+                  </code></pre>
+
+                </div>
+                <div class="col-sm-3 text-center justify-content-rigth align-self-center" style="margin-left: 400px;">
+                    <h2>JavaScript HTML DOM</h2>                    
+                    <p>Hello World!</p>                    
+                    <p>Hello Norway!</p>                    
+                    <p id="demo4"></p>                    
+                    <script>
+                    const myNodelist = document.querySelectorAll("p");                    
+                    document.getElementById("demo4").innerHTML = "The innerHTML of the second paragraph is: " + myNodelist[7].innerHTML;                    
+                    </script>
+
+                </div>
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container p-3">
+        <div class="row text-center text-white">
+          <div class="col ml-auto">
+            <p>Copyright &copy; 2018</p>
+          </div>
+        </div>
+      </div>       
+    </footer>
+
+    <!-- BOOTSTRAP SCRIPTS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+  </body>
+</html>

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Navigation Grupo 4</title>
+    <!-- BOOTSTRAP CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="../css/prism.css" rel="stylesheet" />
+    <script src="../js/prism.js"></script>
+  </head>
+  <body>
+    <!-- NAVIGATION -->
+    <header id="header" class="d-flex align-items-center">
+      <div class="container d-flex align-items-center justify-content-between">
+        <a href="../../index.html" class="logo mr-auto"><img src="../img/logo.png" alt=""></a>
+      </div>
+    </header>
+    <!-- HEADER -->
+    <header class="main-header3">
+      <div class="background-overlay text-white py-5">
+        <div class="container">
+          <div class="row d-flex h-100">
+            <div class="col-sm-6 justify-content-center align-self-center">
+              <h1>
+                DOM Nodes
+              </h1>
+              <p>According to the W3C HTML DOM standard, everything in an HTML document is a node:<br>
+                The entire document is a document node
+                Every HTML element is an element node<br>
+                The text inside HTML elements are text nodes<br>
+                Every HTML attribute is an attribute node (deprecated)<br>
+                All comments are comment nodes</p>
+            </div>
+            <div class="col-sm-6">
+              <br><img src="https://www.w3schools.com/js/pic_htmltree.gif" class="img-fluid d-none d-sm-block">
+            </div>
+            <hr>
+            <div class="col-sm-6">
+            <h1>Node Relationships</h1>
+              <p>
+                Los nodos del árbol de nodos tienen una relación jerárquica entre sí.
+                Los términos padre, hijo y hermano se utilizan para describir las relaciones.
+                En un árbol de nodos, el nodo superior se llama raíz (o nodo raíz)
+                Cada nodo tiene exactamente un padre, excepto la raíz (que no tiene padre)
+                Un nodo puede tener varios hijos.</p>
+            </div>
+            <div class="col-sm-6">
+              <br><img src="https://www.w3schools.com/js/pic_navigate.gif" class="img-fluid d-none d-sm-block">
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- FEATURES -->
+
+    <section class="py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 text-center justify-content-center align-self-center">
+            <h1>Child Nodes and Node Values</h1>
+            <pre style="width: 550px;"><code class="language-html" >
+                &lt;body>
+                &lt;h1 id="id01">My First Page&lt;/h1>
+                &lt;p id="id02"></p>
+                &lt;script>
+                document.getElementById("id02").innerHTML = document.getElementById("id01").innerHTML;
+                &lt;/script>
+                &lt;/body>
+            </code></pre>
+          </div>
+          <div class="col-md-6  text-center justify-content-center align-self-center">
+            <h1 id="id01">My First Page</h1>
+            <p id="id02"></p>
+            <script>
+            document.getElementById("id02").innerHTML = document.getElementById("id01").innerHTML;
+            </script>
+          </div>
+          <div class="col-md-6">
+            <h1>InnerHTML</h1>
+              <p>
+                En la siguiente sección se hará uso de la propiedad innerHTML para recuperar el contenido de un elemento HTML.
+                Sin embargo, aprender los otros métodos anteriores es útil para comprender la estructura del árbol y la navegación del DOM.
+              </p>
+              <h2>Nodos raíz DOM</h2>
+              <p>
+                Hay dos propiedades especiales que permiten el acceso al documento completo:
+                <li>document.body - El cuerpo del documento</li>
+                <li>document.documentElement - El documento completo</li>
+              </p>
+              <pre style="width: 550px;"><code class="language-html" >
+                &lt;body>
+                  &lt;h2>JavaScript HTMLDOM&lt;/h2>
+                  &lt;p>Displaying document.documentElement&lt;/p>                  
+                  &lt;p id="demo">&lt;/p>                  
+                  &lt;script>
+                  &lt;ocument.getElementById("demo").innerHTML = document.documentElement.innerHTML;
+                  &lt;/script>                  
+                  &lt;/body>
+              </code></pre>
+          </div>
+          <div class="col-md-4" style="margin-top: 100px; margin-left:150px ">
+            <h2>JavaScript HTMLDOM</h2>
+                <p>Displaying document.documentElement</p>
+                <h2>JavaScript HTMLDOM</h2>
+                <p>Displaying document.documentElement</p>
+
+          <p id="demo3"></p>
+            </div>
+        </section>
+
+    <!-- ABOUT -->
+    <section class="m5 text-center bg-light " style="width:100%;" >
+      <div class="container " >
+        <div class="row">
+          <div class="m-5" >
+            <h3>LA PROPIEDAD NODENAME</h3>
+            <p>
+              La propiedad nodeName especifica el nombre de un nodo.
+              <li>nodeName es de solo lectura</li>
+              <li>nodeName de un nodo de elemento es el mismo que el nombre de la etiqueta</li>
+              <li>nodeName de un atributo nodo es el nombre del atributo</li>
+              <li>nodeName de un nodo de texto es siempre #text</li>
+              <li>nodeName del nodo del documento es siempre #document</li>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ACCORDION -->
+    <section class="container text-center p-5">
+      <div class="row">
+        <div class="accordion" id="accordionExample">
+          <div class="card">
+            <div class="card-header" id="headingOne">
+              <h5 class="mb-0">
+                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  LAS PROPIEDADES DE NODETYPE MÁS IMPORTANTES SON:
+                </button>
+              </h5>
+            </div>
+
+            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+              <div class="card-body ">
+                <table class="table table-striped">
+                  <thead>
+                    <tr>
+                      <th>Node</th>
+                      <th>Type</th>
+                      <th>Example</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>ELEMENT_NODE</td>
+                      <td>1</td>
+                      <td>&lt;h1 class="heading">W3Schools&lt;/h1></td>
+                    </tr>
+                    <tr>
+                      <td>ATTRIBUTE_NODE</td>
+                      <td>2</td>
+                      <td>class = "heading" (deprecated)</td>
+                    </tr>
+                    <tr>
+                      <td>TEXT_NODE</td>
+                      <td>3</td>
+                      <td>W3Schools</td>
+                    </tr>
+                    <tr>
+                      <td>COMMENT_NODE</td>
+                      <td>8</td>
+                      <td>&lt;!-- This is a comment --></td>
+                    </tr>
+                    <tr>
+                      <td>DOCUMENT_NODE</td>
+                      <td>9</td>
+                      <td>The HTML document itself (the parent of &lt;html>)</td>
+                    </tr>
+                    <tr>
+                      <td>DOCUMENT_TYPE_NODE</td>
+                      <td>10</td>
+                      <td>&lt;!Doctype html></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER-->
+    <footer>
+      <div class="container p-3">
+        <div class="row text-center text-white">
+          <div class="col ml-auto">
+            <p>Copyright: Richard Caraguay y Paola Farinango &copy; 2022</p>
+          </div>
+        </div>
+      </div>       
+    </footer>
+
+    <!-- BOOTSTRAP SCRIPTS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+  </body>
+</html>
