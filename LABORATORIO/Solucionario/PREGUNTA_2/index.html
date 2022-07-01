@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+	
+        <style type="text/css">
+                #background{position:absolute; width:99%; height:130%;}
+                #fixed {position:absolute; top: 100px; left: 100px;}
+            </style>
+    </head>
+
+<body>
+<div>
+    <img id="background" src="img/fondo.jpeg"/> 
+		</div>
+        <div id="fixed">
+<p id="demo"></p>
+</div>
+<script>
+var xhttp = new XMLHttpRequest(); //linea 1
+
+xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        myFunction(this);
+    }
+};
+xhttp.open("GET", "ejemplo.xml", false); //linea 2
+xhttp.send(); // linea 3
+
+function myFunction(xml) {
+    var xmlDoc = xml.responseXML; // linea 4
+    var x = xmlDoc.documentElement;
+    document.getElementById("demo").innerHTML = xmlDoc.getElementsByTagName("message")[0].childNodes[0].nodeValue;
+}
+</script>
+
+</body>
+</html>

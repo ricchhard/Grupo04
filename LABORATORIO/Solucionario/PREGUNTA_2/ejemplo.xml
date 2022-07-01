@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE body [
+  <!ENTITY warning "Advertencia: Algo malo pasó... porfavor intente de nuevo.">
+]>
+<body>
+  <message>Datos de docuemnto XML, mostrados en pantalla por Richard Caraguay y Paola Farinango</message>
+</body>

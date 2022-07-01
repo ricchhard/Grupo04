@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<style type="text/css">
+			#background{position:absolute; width:99%; height:130%;}
+			#fixed {position:absolute; top: 100px; left: 100px;}
+		</style>
+</head>
+<body>
+<div>
+			<img id="background" src="img/fondo.jpeg"/> 
+		</div>
+		<div id="fixed">
+			
+			<p id="demo"></p>
+			<p id="demo1"></p>
+		</div>
+
+
+<script>
+var parser, xmlDoc;
+var text = "<bookstore><book>" +
+"<title>Grupo 4.</title>" +
+"<author>Richard Caraguay, Paola Farinango</author>" +
+"<year>2005</year>" +
+"</book></bookstore>";
+
+parser = new DOMParser();
+xmlDoc = parser.parseFromString(text,"text/xml");
+
+document.getElementById("demo").innerHTML =
+xmlDoc.getElementsByTagName("title")[0].childNodes[0].nodeValue;
+document.getElementById("demo1").innerHTML =
+xmlDoc.getElementsByTagName("author")[0].childNodes[0].nodeValue;
+
+</script>
+
+</body>
+</html>
